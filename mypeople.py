@@ -1,4 +1,9 @@
 from tkinter import *
+from addpeople import Addpeople
+import sqlite3 #database 
+con=sqlite3.connect('database.db') # for connection 
+cur=con.cursor() #for run queries
+
 class Mypeople(Toplevel):
     def __init__(self):
         Toplevel.__init__(self)
@@ -18,7 +23,7 @@ class Mypeople(Toplevel):
         #buttons
         self.sbframe=Frame(self.bottom,height=400,width=150,bg="#377a9b")
         self.sbframe.place(x=500,y=0)
-        self.addbutton=Button(self.sbframe,text=" add ",width=10)
+        self.addbutton=Button(self.sbframe,text=" add ",width=10,command=self.addpeople)
         self.addbutton.place(x=30,y=30)
         self.updatebutton=Button(self.sbframe,text=" update ",width=10)
         self.updatebutton.place(x=30,y=80)
@@ -32,12 +37,11 @@ class Mypeople(Toplevel):
         self.scroll=Scrollbar(self.bottom,command=self.listbox.yview,orient=VERTICAL)
         self.listbox.config(yscrollcommand=self.scroll.set)
         self.scroll.grid(row=0,column=1,sticky=N+S)
+    def addpeople(self):
+        add=Addpeople()
 
         
      
-
-        
-        
 
         
         
