@@ -1,6 +1,7 @@
 from tkinter import *
 import datetime
 from mypeople import Mypeople
+from addpeople import Addpeople
 date=datetime.datetime.now().date()
 date=str(date)
 
@@ -23,12 +24,15 @@ class Application(object):
         #adding button in bottom frame
         self.viewbutton=Button(self.bottom,text="  My people  ",width=15,fg="#219991",command=self.mypeople)
         self.viewbutton.place(x=250,y=50)
-        self.addbutton=Button(self.bottom,text="  Add people  ",width=15,fg="#219991")
+        self.addbutton=Button(self.bottom,text="  Add people  ",width=15,fg="#219991",command=self.addpeople)
         self.addbutton.place(x=250,y=100)
         self.aboutbutton=Button(self.bottom,text="  About us  ",width=15,fg="#219991")
         self.aboutbutton.place(x=250,y=150)
     def mypeople(self):
         people=Mypeople()
+    def addpeople(self):
+        add=Addpeople()
+
 
 
 
