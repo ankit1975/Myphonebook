@@ -2,6 +2,8 @@ from tkinter import *
 import datetime
 from mypeople import Mypeople
 from addpeople import Addpeople
+from updatepeople import Updatepeople
+from aboutus import Aboutus
 date=datetime.datetime.now().date()
 date=str(date)
 
@@ -26,14 +28,14 @@ class Application(object):
         self.viewbutton.place(x=250,y=50)
         self.addbutton=Button(self.bottom,text="  Add people  ",width=15,fg="#219991",command=self.addpeople)
         self.addbutton.place(x=250,y=100)
-        self.aboutbutton=Button(self.bottom,text="  About us  ",width=15,fg="#219991")
+        self.aboutbutton=Button(self.bottom,text="  About us  ",width=15,fg="#219991",command=self.about)
         self.aboutbutton.place(x=250,y=150)
     def mypeople(self):
         people=Mypeople()
     def addpeople(self):
         add=Addpeople()
-
-
+    def about(self):
+        about=Aboutus()
 
 
 def main():
