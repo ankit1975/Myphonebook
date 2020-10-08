@@ -59,6 +59,6 @@ class Addpeople(Toplevel):
                 messagebox.showerror("Error",str(e))
         else:
 
-            print("abe sale")
-            messagebox.showerror("error","fill all fields !!!",icon="warning")
+            #print("abe sale")
+            messagebox.showerror("error","abe c***, fill all fields !!!",icon="warning")
 
