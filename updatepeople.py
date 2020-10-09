@@ -17,7 +17,7 @@ class Updatepeople(Toplevel):
         self.bottom=Frame(self,height=400,bg="#6286a6")
         self.bottom.pack(fill=X)
         #top frame design
-        self.topimage=PhotoImage(file="icons/phonebook.png")
+        self.topimage=PhotoImage(file="phonebook.png")
         self.toplabel=Label(self.top,image=self.topimage,bg="white")
         self.toplabel.place(x=60,y=25)
         self.heading=Label(self.top,text="Update people",font='arial 15 bold',bg="white",fg="orange")
