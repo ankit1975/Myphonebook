@@ -16,7 +16,7 @@ class Application(object):
         self.bottom=Frame(master,height=400,bg="#2fa0bc",width=650)
         self.bottom.pack()
         #top frame design
-        self.topimage=PhotoImage(file="icons/phonebook.png")
+        self.topimage=PhotoImage(file="phonebook.png")
         self.toplabel=Label(self.top,image=self.topimage,bg="white")
         self.toplabel.place(x=60,y=25)
         self.heading=Label(self.top,text="My Phone Book App",font='arial 15 bold',bg="white",fg="orange")
