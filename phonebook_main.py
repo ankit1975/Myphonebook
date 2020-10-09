@@ -1,6 +1,6 @@
 from tkinter import *
 import datetime
-from mypeople import Mypeople
+from mypeople import Mypeople    #files imported
 from addpeople import Addpeople
 from updatepeople import Updatepeople
 from aboutus import Aboutus
@@ -47,5 +47,5 @@ def main():
     root.mainloop()
 
 
-if __name__=='__main__':
+if __name__=='__main__':   # this code runs main method
     main()
