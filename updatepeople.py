@@ -9,7 +9,7 @@ class Updatepeople(Toplevel):
     def __init__(self,id):
         self.id=id
         Toplevel.__init__(self)
-        self.geometry("650x550+300+150")
+        self.geometry("650x550+300+150")       
         self.title("Update people")
         self.resizable(False,False)
         self.top=Frame(self,height=150,bg="white")#width=650)
