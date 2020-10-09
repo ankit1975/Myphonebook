@@ -18,7 +18,7 @@ class Mypeople(Toplevel):
         self.bottom=Frame(self,height=400,bg="#2fa0bc")
         self.bottom.pack(fill=X)
         #top frame design
-        self.topimage=PhotoImage(file="icons/phonebook.png")
+        self.topimage=PhotoImage(file="phonebook.png")
         self.toplabel=Label(self.top,image=self.topimage,bg="white")
         self.toplabel.place(x=60,y=25)
         self.heading=Label(self.top,text="My people",font='arial 15 bold',bg="white",fg="orange")
