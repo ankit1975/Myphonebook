@@ -50,7 +50,16 @@ class Addpeople(Toplevel):
         #print(name)
         if name and mobileno and email and address != "":
             try:
-                #add to the database
+                #create table
+                query="""CREATE TABLE addressbook(
+                                    person_id integer PRIMARY KEY,
+                                    person_name text NOT NULL,
+                                    person_mobileno integer,
+                                    person_email text NOT NULL,
+                                    person_address text NOT NULL);"""
+                cur.execute(query)
+                con.commit()
+                #insert into database 
                 query="insert into 'addressbook'(person_name,person_mobileno,person_email,person_address) values(?,?,?,?)"
                 cur.execute(query,(name,mobileno,email,address))
                 con.commit()
